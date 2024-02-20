@@ -1,9 +1,9 @@
-import ConverterForm from "../../components/ConverterForm/ConverterForm";
+import Converter from "../../components/ConverterForm/Converter";
 
 const HomePage = () => {
   return (
     <>
-      <ConverterForm />
+      <Converter />
     </>
   );
 };
