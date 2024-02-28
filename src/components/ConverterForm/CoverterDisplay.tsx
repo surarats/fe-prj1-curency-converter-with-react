@@ -9,14 +9,14 @@ const ConverterDisplay = ({
   return (
     <section className="py-4 px-10 flex max-sm:flex-col items-center justify-center border rounded-b-lg shadow-2xl bg-white h-[200px]">
       <div className="me-10 max-sm:me-0">
-        <div className="text-4xl max-sm:text-2xl font-bold">
+        <div className="text-4xl max-sm:text-2xl font-bold ">
           {amount} {currencyFrom} =
         </div>
-        <div className="text-5xl max-sm:text-3xl font-bold">
+        <div className="text-5xl max-sm:text-3xl font-bold ">
           {(amount * convertRate).toLocaleString()} {currencyTo}
         </div>
       </div>
-      <div className="ms-2 max-sm:ms-0 mt-7">
+      <div className="ms-2 max-sm:ms-0 mt-7 ">
         <div>
           1 {currencyFrom} = {convertRate} {currencyTo}
         </div>

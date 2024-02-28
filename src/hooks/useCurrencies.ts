@@ -4,6 +4,7 @@ import axios from "axios";
 export const useCurrencies = () => {
   const [currencies, setCurrencies] = useState<Map<string, string>>(new Map());
 
+  // === Get currencies name and map shortname, fullname ===
   useEffect(() => {
     const fetchCurrency = async () => {
       try {
@@ -13,7 +14,9 @@ export const useCurrencies = () => {
           newMap.set(key, value);
         });
         setCurrencies(newMap);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     };
     fetchCurrency();
   }, []);

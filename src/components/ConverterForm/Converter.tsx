@@ -5,31 +5,25 @@ import ConverterForm from "./ConverterForm";
 const Converter = () => {
   const { currencies } = useCurrencies();
 
-  const {
-    amount,
-    setAmount,
-    currencyFrom,
-    setCurrencyFrom,
-    currencyTo,
-    setCurrencyTo,
-    convertRate,
-    showCurrencyRate,
-  } = useConvert();
+  const convert = useConvert();
+  // const {
+  //   amount,
+  //   setAmount,
+  //   currencyFrom,
+  //   setCurrencyFrom,
+  //   currencyTo,
+  //   setCurrencyTo,
+  //   convertRate,
+  //   showCurrencyRate,
+  // } = useConvert();
 
   const currencyObj = {
-    amount,
-    setAmount,
-    currencyFrom,
-    setCurrencyFrom,
-    currencyTo,
-    setCurrencyTo,
-    convertRate,
-    showCurrencyRate,
+    ...convert,
   };
 
   return (
-    <div className="flex flex-col items-center h-screen ">
-      <div className="w-[1150px] max-sm:w-[350px]">
+    <div className="flex flex-col items-center mx-auto max-sm:w-[350px] sm:w-[1150px] h-screen">
+      <div className="w-full">
         <ConverterForm currencyObj={currencyObj} currencies={currencies} />
       </div>
     </div>

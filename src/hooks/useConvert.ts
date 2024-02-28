@@ -8,6 +8,7 @@ export const useConvert = () => {
   const [convertRate, setConvertRate] = useState<number>(0);
   const [showCurrencyRate, setShowCurrencyRate] = useState<boolean>(false);
 
+  // === Get convert currency rate from base-currencies ===
   useEffect(() => {
     const handleConvert = async () => {
       if (currencyFrom !== "" && currencyTo !== "" && amount > 0) {
